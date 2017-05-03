@@ -65,18 +65,16 @@ function set_player() {
 
 <label for="message">Question/Comment</label>
 <textarea name="message"></textarea>
-<td>Otel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="otel" onchange="set_player()">
+<label for="Otel">Otel:</label>
+    <select name="otel" onchange="set_player()">
     <option selected="selected" style="background-color:#FFCC00;">Please Chose</option>
     <option value="otel 1">Otel 1</option>
     <option value="otel 2">Otel 2</option>
     </select>
-    </td>
-    <tr><td>Massage:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="Massage">Masaj:</label>
     <select name="masaj">
     <option>Select Hotel First</option>
     </select>
-    </td>
-</tr>
 <input type="submit" name="submit" class="button" id="submit" value="Send Message" />
 
 </fieldset>
