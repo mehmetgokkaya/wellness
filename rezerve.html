@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTML5 Form</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/jquery.form.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script>
+$(function(){
+$('#contact').validate({
+submitHandler: function(form) {
+    $(form).ajaxSubmit({
+    url: '//formspree.io/mehmet@mehmetgokkaya.com',
+    success: function() {
+    $('#contact').hide();
+    $('#contact-form').append("<p class='thanks'>Thanks! Your request has been sent.</p>")
+    }
+    });
+    }
+});         
+});
+</script>
+</head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
 var ote1				= new Array("masaj 1", "masaj 2");
@@ -20,7 +46,7 @@ function set_player() {
 }
 </script>
 
-
+<div id="contact-form">	
 <form name="arama" method="POST" action="//formspree.io/mehmet@mehmetgokkaya.com">
 <table>
 <tr>
@@ -50,3 +76,13 @@ function set_player() {
       </td>
   </table>
 </form>
+</div>
+
+<script src="js/modernizr-min.js"></script>
+<script>
+if (!Modernizr.input.placeholder){
+      $('input[placeholder], textarea[placeholder]').placeholder();
+}
+</script>
+</body>
+</html>
