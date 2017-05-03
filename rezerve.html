@@ -46,17 +46,6 @@ function set_player() {
   }
 }
 </script>
-        <!-- cdn for modernizr, if you haven't included it already -->
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
-<!-- polyfiller file to detect and load polyfills -->
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
-<script>
-  webshims.setOptions('waitReady', false);
-  webshims.setOptions('forms-ext', {types: 'date'});
-  webshims.polyfill('forms forms-ext');
-</script>
-
-        
 <div id="contact-form" style="margin: 15% 0 0 45%;">	
 <form name="arama" method="POST" action="//formspree.io/mehmet@mehmetgokkaya.com">
     <fieldset style="width: 25%;">
@@ -70,8 +59,7 @@ function set_player() {
     
 <tr><td><label style="float: left;" for="Room Number">Room Number:</label><input style="float: right;" type="Room Number" name="Room Number" placeholder="xxxx"></td></tr>
 <tr><td>
-<input type="date" />
-
+ <input type="date" name="bgun" max="2017-12-31">
     <tr><td><label style="float: left;" for="Question/Comment">Question/Comment:</label><input style="float: right;" type="Mesajınız" name="Mesajınız" placeholder=""></td></tr>
  
     <td style="float: left;">Otel:<select type="text" name="otel" onchange="set_player()" style="float: right;width: 400px;">
@@ -99,10 +87,6 @@ if (!Modernizr.input.placeholder){
       $('input[placeholder], textarea[placeholder]').placeholder();
 }
 </script>
-        <!-- cdn for modernizr, if you haven't included it already -->
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
-<!-- polyfiller file to detect and load polyfills -->
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
 </body>
     version 0.1.6
 </html>
