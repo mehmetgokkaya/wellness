@@ -9,5 +9,5 @@ $message = strip_tags($_POST['message']);
 // Send Message
 mail( "yournameeeee@gmail.com", "Contact Form Submission",
 "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $url\nMessage: $message\n",
-"From: Forms <forms@example.net>" );
+"From: Forms <mehmet@mehmetgokkaya.com>" );
 ?>
