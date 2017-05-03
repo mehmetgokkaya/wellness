@@ -59,8 +59,9 @@ function set_player() {
     
 <tr><td><label style="float: left;" for="Room Number">Room Number:</label><input style="float: right;" type="Room Number" name="Room Number" placeholder="xxxx"></td></tr>
 <tr><td>
-<tr><td><label style="float: left;" for="Room Number">Date:</label><input style="float: right;" type="date" name="date" size="15" value="2017-05-05"></td></tr>
- <tr><td><label style="float: left;" for="Room Number">Time:</label><input style="float: right;" type="time" name="usr_time" value="23:00"></td></tr>
+<tr><td><label style="float: left;" for="Room Number">Date:</label><input id="date" style="float: right;" type="date" name="date" size="15" value="2017-05-05"></td></tr>
+ <datepicker type="grid" value="2007-03-26"/>
+    <tr><td><label style="float: left;" for="Room Number">Time:</label><input style="float: right;" type="time" name="usr_time" value="23:00"></td></tr>
     <tr><td><label style="float: left;" for="Question/Comment">Question/Comment:</label><input style="float: right;" type="Mesajınız" name="Mesajınız" placeholder=""></td></tr>
  
     <td style="float: left;">Otel:<select type="text" name="otel" onchange="set_player()" style="float: right;width: 400px;">
