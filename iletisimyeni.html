@@ -23,7 +23,11 @@ submitHandler: function(form) {
 });         
 });
 </script>
-    <script type="text/javascript">
+    
+</head>
+
+<body>
+<script type="text/javascript">
 var ote1				= new Array("masaj 1", "masaj 2");
 var ote2				= new Array("masaj 1", "masaj 2");
 function set_player() {
@@ -35,16 +39,13 @@ function set_player() {
     for(var i=0; i<ote1.length; i++)
     select_masaj.options[select_masaj.options.length] = new Option(ote1[i]);
   }
-  if (selected_otel == "otel 1"){
+    select_masaj.options.length=0;
+  if (selected_otel == "otel 2"){
     for(var i=0; i<ote1.length; i++)
     select_masaj.options[select_masaj.options.length] = new Option(ote1[i]);
   }
 }
 </script>
-</head>
-
-<body>
-
     
 <div id="contact-form">	
 
