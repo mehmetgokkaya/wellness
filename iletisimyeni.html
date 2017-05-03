@@ -34,14 +34,14 @@ function set_player() {
   var select_otel = document.arama.otel;
   var select_masaj = document.arama.masaj;
   var selected_otel = select_otel.options[select_otel.selectedIndex].value;
+    
   select_masaj.options.length=0;
   if (selected_otel == "otel 1"){
     for(var i=0; i<ote1.length; i++)
     select_masaj.options[select_masaj.options.length] = new Option(ote1[i]);
   }
-    select_masaj.options.length=0;
   if (selected_otel == "otel 2"){
-    for(var i=0; i<ote1.length; i++)
+    for(var i=0; i<ote2.length; i++)
     select_masaj.options[select_masaj.options.length] = new Option(ote1[i]);
   }
 }
