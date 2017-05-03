@@ -1,0 +1,52 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+var ote1				= new Array("masaj 1", "masaj 2");
+var ote2				= new Array("masaj 1", "masaj 2");
+
+function set_player() {
+  var select_otel = document.arama.otel;
+  var select_masaj = document.arama.masaj;
+  var selected_otel = select_otel.options[select_otel.selectedIndex].value;
+
+  select_masaj.options.length=0;
+  if (selected_otel == "otel 1"){
+    for(var i=0; i<ote1.length; i++)
+    select_masaj.options[select_masaj.options.length] = new Option(ote1[i]);
+  }
+  if (selected_Otel == "otel 2"){
+    for(var i=0; i<ote1.length; i++)
+    select_masaj.options[select_masaj.options.length] = new Option(ote2[i]);
+  }
+}
+</script>
+
+
+<form name="arama" method="POST" action="//formspree.io/mehmet@mehmetgokkaya.com">
+<table>
+<tr>
+
+<td>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="Full Name" title="Enter your name" class="required"><td/>
+</tr>
+<tr><td>Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="tel" name="phone" placeholder="ex. (555) 555-5555"><td/></tr>
+
+<tr><td>Room Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Room Number" name="Room Number" placeholder="xxxx"></td></tr>
+
+<tr><td>Question/Comment:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Mesajınız" name="Mesajınız" placeholder=""></td></tr>
+ 
+    <td>Otel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="otel" onchange="set_player()">
+    <option selected="selected" style="background-color:#FFCC00;">Please Chose</option>
+    <option value="otel 1">Otel 1</option>
+    <option value="otel 2">Otel 2</option>
+    </select>
+    </td>
+    <tr><td>Massage:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select name="masaj">
+    <option>Select Hotel First</option>
+    </select>
+    </td>
+    </tr>
+      <td>
+        <center><input type="submit" name="button" id="button" value="Send" /></center>
+      </td>
+  </table>
+</form>
