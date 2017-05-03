@@ -56,9 +56,11 @@ function set_player() {
 <td><label  for="name" style="float: left;">Name:</label><input style="float: right;" type="text" name="name" placeholder="Full Name" title="Enter your name" class="required"><td/>
 </tr>
 <tr><td><label style="float: left;" style="float: left;" for="Phone">Phone:</label><input style="float: right;" type="text" name="phone" placeholder="ex. (555) 555-5555"><td/></tr>
-
+<tr><td><label style="float: left;" for="email">E-mail:</label><input style="float: right;" type="email" name="email" placeholder="mail@mail.com"></td></tr>
+    
 <tr><td><label style="float: left;" for="Room Number">Room Number:</label><input style="float: right;" type="Room Number" name="Room Number" placeholder="xxxx"></td></tr>
-
+<tr><td><label style="float: left;" for="Date">Date:</label><input style="float: right;" type="date" name="Date"></td></tr>
+    <tr><td><label style="float: left;" for="Date">Date:</label><input style="float: right;" type=time min=9:00 max=17:00 step=900> - 15m increments</td></tr>
 <tr><td><label style="float: left;" for="Question/Comment">Question/Comment:</label><input style="float: right;" type="Mesajınız" name="Mesajınız" placeholder=""></td></tr>
  
     <td style="float: left;">Otel:<select type="text" name="otel" onchange="set_player()" style="float: right;width: 400px;">
@@ -87,5 +89,5 @@ if (!Modernizr.input.placeholder){
 }
 </script>
 </body>
-    version 0.1.1
+    version 0.1.2
 </html>
