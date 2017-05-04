@@ -3,26 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>Unicorn Spa Wellness Reservation</title>
-
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="css/css/styl.css">
-<script>
-$(function(){
-$('#contact').validate({
-submitHandler: function(form) {
-    $(form).ajaxSubmit({
-    url: '//formspree.io/mehmet@mehmetgokkaya.com',
-    success: function() {
-    $('#contact').hide();
-    $('#contact-form').append("<p class='thanks'>Thanks! Your request has been sent.</p>")
-    }
-    });
-    }
-});         
-});
-    </script>
     <style>
 .ui-draggable, .ui-droppable {
 	background-position: top;
@@ -100,5 +84,5 @@ if (!Modernizr.input.placeholder){
 }
 </script>
 </body>
-    version 0.1.9
+    version 0.2.0
 </html>
