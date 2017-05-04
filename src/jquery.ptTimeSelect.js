@@ -134,9 +134,8 @@
                         +    '                </a>'
                         +    '            </div>'
                         +    '            <div id="ptTimeSelectUserTime" style="float: left;">'
-                        +    '                <span id="ptTimeSelectUserSelHr">1</span> : '
+                        +    '                <span id="ptTimeSelectUserSelHr">09</span> : '
                         +    '                <span id="ptTimeSelectUserSelMin">00</span> '
-                        +    '                <span id="ptTimeSelectUserSelAmPm"></span>'
                         +    '            </div>'
                         +    '            <br style="clear: both;" /><div></div>'
                         +    '        </div>'
@@ -149,13 +148,6 @@
                         +    '                <div>'
                         +    '                    <div style="float: left; width: 50%;">'
                         +    '                        <div class="ui-widget-content ptTimeSelectLeftPane">'
-                        +    '                            <div class="ptTimeSelectHrAmPmCntr">'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" '
-                        +    '                                        style="display: block; width: 45%; float: left;"></a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" '
-                        +    '                                        style="display: block; width: 45%; float: left;"></a>'
-                        +    '                                <br style="clear: left;" /><div></div>'
-                        +    '                            </div>'
                         +    '                            <div class="ptTimeSelectHrCntr">'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">9</a>'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">10</a>'
@@ -314,7 +306,7 @@
             if (match) {
                 hr    = match[1] || 1;
                 min    = match[2] || '00';
-                tm    = match[3] || 'AM';
+                tm    = match[3] || '';
             }
         }
         cntr.find("#ptTimeSelectUserSelHr").empty().append(hr);
