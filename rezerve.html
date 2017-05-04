@@ -7,9 +7,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="css/css/styl.css">
-	<script type="text/javascript" src="wickedpicker.js"></script>
-	<link rel='stylesheet' type='text/css'href='css/timepicki.css'/>
-	<script type='text/javascript'src='js/timepicki.js'></script>
+
 	
     <style>
 .ui-draggable, .ui-droppable {
@@ -22,17 +20,6 @@
 	} );
 	</script>
 
-<script type='text/javascript'>
-	$('#timepicker11').timepicki({
-		show_meridian:false,
-		min_hour_value:0,
-		max_hour_value:23,
-		step_size_minutes:15,
-		overflow_minutes:true,
-		increase_direction:'up',
-		disable_keyboard_mobile: true});
-</script>
-	
 </head>
     <body>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -71,7 +58,7 @@ function set_player() {
 <tr><td>
 <tr><td><label style="float: left;" for="date">Date:</label><input style="float: right;" name="date" type="text" id="datepicker"></td></tr>
  <datepicker type="grid" value="2007-03-26"/>
-    <tr><td><label style="float: left;" for="Room Number">Time:</label><input style="float: right;" type="text" name="time" id='timepicker' class="timepicki-input"/></td></tr>
+    <tr><td><label style="float: left;" for="Time">Time:</label><input style="float: right;" type="text" name="time" /></td></tr>
     <tr><td><label style="float: left;" for="Question/Comment">Question/Comment:</label><input style="float: right;" type="Mesajınız" name="Mesajınız" placeholder=""></td></tr>
  
     <td style="float: left;">Otel:<select type="text" name="otel" onchange="set_player()" style="float: right;width: 400px;">
