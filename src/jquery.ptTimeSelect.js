@@ -227,15 +227,6 @@
      * @return {undefined}
      * 
      */
-    jQuery.ptTimeSelect.setHr = function(h) {
-        if (    h.toLowerCase() == "am"
-            ||  h.toLowerCase() == "pm"
-        ) {
-            jQuery('#ptTimeSelectUserSelAmPm').empty().append(h);
-        } else {
-            jQuery('#ptTimeSelectUserSelHr').empty().append(h);
-        }
-    };// END setHr() function
         
     /**
      * Sets the minutes selected by the user on the popup.
@@ -262,7 +253,6 @@
                     + ":"
                     + jQuery('#ptTimeSelectUserSelMin').text()
                     + " "
-                    + jQuery('#ptTimeSelectUserSelAmPm').text();
         jQuery(".isPtTimeSelectActive").val(tSel);
         this.closeCntr();
         
@@ -309,7 +299,6 @@
         }
         cntr.find("#ptTimeSelectUserSelHr").empty().append(hr);
         cntr.find("#ptTimeSelectUserSelMin").empty().append(min);
-        cntr.find("#ptTimeSelectUserSelAmPm").empty().append(tm);
         cntr.find(".ptTimeSelectTimeLabelsCntr .ptTimeSelectLeftPane")
             .empty().append(opt.hoursLabel);
         cntr.find(".ptTimeSelectTimeLabelsCntr .ptTimeSelectRightPane")
