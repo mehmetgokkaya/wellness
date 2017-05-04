@@ -16,6 +16,11 @@
 	$( function() {
 		$( "#datepicker" ).datepicker();
 	} );
+	    
+ var timepickers = $('.timepicker').wickedpicker();
+console.log(timepickers.wickedpicker('time', 1));
+//JS console: time of timepicker-two
+
 	</script>
 </head>
     <body>
@@ -55,7 +60,7 @@ function set_player() {
 <tr><td>
 <tr><td><label style="float: left;" for="date">Date:</label><input style="float: right;" type="text" id="datepicker"></td></tr>
  <datepicker type="grid" value="2007-03-26"/>
-    <tr><td><label style="float: left;" for="Room Number">Time:</label><input style="float: right;" type="time" name="usr_time" value="23:00"></td></tr>
+    <tr><td><label style="float: left;" for="Room Number">Time:</label><input style="float: right;" type="text" name="timepicker" class="timepicker"/></td></tr>
     <tr><td><label style="float: left;" for="Question/Comment">Question/Comment:</label><input style="float: right;" type="Mesajınız" name="Mesajınız" placeholder=""></td></tr>
  
     <td style="float: left;">Otel:<select type="text" name="otel" onchange="set_player()" style="float: right;width: 400px;">
@@ -83,6 +88,7 @@ if (!Modernizr.input.placeholder){
       $('input[placeholder], textarea[placeholder]').placeholder();
 }
 </script>
+	    <script type="text/javascript" src="wickedpicker.js"></script>
 </body>
     version 0.2.0
 </html>
