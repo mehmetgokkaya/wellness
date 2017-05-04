@@ -297,16 +297,14 @@
             cntr.addClass(opt.containerClass);
         }
         cntr.css(style);
-        var hr    = 1;
+        var hr    = 09;
         var min   = '00';
-        var tm    = 'AM';
         if (i.val()) {
             var re = /([0-9]{1,2}).*:.*([0-9]{2}).*(PM|AM)/i;
             var match = re.exec(i.val());
             if (match) {
-                hr    = match[1] || 1;
+                hr    = match[1] || 09;
                 min    = match[2] || '00';
-                tm    = match[3] || '';
             }
         }
         cntr.find("#ptTimeSelectUserSelHr").empty().append(hr);
