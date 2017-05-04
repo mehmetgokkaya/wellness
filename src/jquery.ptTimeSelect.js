@@ -136,7 +136,7 @@
                         +    '            <div id="ptTimeSelectUserTime" style="float: left;">'
                         +    '                <span id="ptTimeSelectUserSelHr">1</span> : '
                         +    '                <span id="ptTimeSelectUserSelMin">00</span> '
-                        +    '                <span id="ptTimeSelectUserSelAmPm">AM</span>'
+                        +    '                <span id="ptTimeSelectUserSelAmPm"></span>'
                         +    '            </div>'
                         +    '            <br style="clear: both;" /><div></div>'
                         +    '        </div>'
