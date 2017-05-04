@@ -134,9 +134,9 @@
                         +    '                </a>'
                         +    '            </div>'
                         +    '            <div id="ptTimeSelectUserTime" style="float: left;">'
-                        +    '                <span id="ptTimeSelectUserSelHr">1</span> : '
+                        +    '                <span id="ptTimeSelectUserSelHr">9</span> : '
                         +    '                <span id="ptTimeSelectUserSelMin">00</span> '
-                        +    '                <span id="ptTimeSelectUserSelAmPm">AM</span>'
+                        +    '             
                         +    '            </div>'
                         +    '            <br style="clear: both;" /><div></div>'
                         +    '        </div>'
@@ -151,24 +151,22 @@
                         +    '                        <div class="ui-widget-content ptTimeSelectLeftPane">'
                         +    '                            <div class="ptTimeSelectHrAmPmCntr">'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" '
-                        +    '                                        style="display: block; width: 45%; float: left;">AM</a>'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);" '
-                        +    '                                        style="display: block; width: 45%; float: left;">PM</a>'
                         +    '                                <br style="clear: left;" /><div></div>'
                         +    '                            </div>'
                         +    '                            <div class="ptTimeSelectHrCntr">'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">1</a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">2</a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">3</a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">4</a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">5</a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">6</a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">7</a>'
-                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">8</a>'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">9</a>'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">10</a>'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">11</a>'
                         +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">12</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">13</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">14</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">15</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">16</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">17</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">18</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">19</a>'
+                        +    '                                <a class="ptTimeSelectHr ui-state-default" href="javascript: void(0);">20</a>'
                         +    '                                <br style="clear: left;" /><div></div>'
                         +    '                            </div>'
                         +    '                        </div>'
@@ -177,17 +175,9 @@
                         +    '                        <div class="ui-widget-content ptTimeSelectRightPane">'
                         +    '                            <div class="ptTimeSelectMinCntr">'
                         +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">00</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">05</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">10</a>'
                         +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">15</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">20</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">25</a>'
                         +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">30</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">35</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">40</a>'
                         +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">45</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">50</a>'
-                        +    '                                <a class="ptTimeSelectMin ui-state-default" href="javascript: void(0);">55</a>'
                         +    '                                <br style="clear: left;" /><div></div>'
                         +    '                            </div>'
                         +    '                        </div>'
@@ -244,10 +234,10 @@
      * 
      */
     jQuery.ptTimeSelect.setHr = function(h) {
-        if (    h.toLowerCase() == "am"
-            ||  h.toLowerCase() == "pm"
+        if (    h.toLowerCase() == ""
+            ||  h.toLowerCase() == ""
         ) {
-            jQuery('#ptTimeSelectUserSelAmPm').empty().append(h);
+            jQuery('#ptTimeSelectUserSelAmP').empty().append(h);
         } else {
             jQuery('#ptTimeSelectUserSelHr').empty().append(h);
         }
@@ -278,7 +268,7 @@
                     + ":"
                     + jQuery('#ptTimeSelectUserSelMin').text()
                     + " "
-                    + jQuery('#ptTimeSelectUserSelAmPm').text();
+                    + jQuery('#ptTimeSelectUserSelAmP').text();
         jQuery(".isPtTimeSelectActive").val(tSel);
         this.closeCntr();
         
@@ -313,9 +303,9 @@
             cntr.addClass(opt.containerClass);
         }
         cntr.css(style);
-        var hr    = 1;
+        var hr    = 9;
         var min   = '00';
-        var tm    = 'AM';
+        var tm    = '';
         if (i.val()) {
             var re = /([0-9]{1,2}).*:.*([0-9]{2}).*(PM|AM)/i;
             var match = re.exec(i.val());
