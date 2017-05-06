@@ -2,111 +2,160 @@
 <html>
 <head>
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
+
+  body, html {
+  height : 100%;
+  
+  font-family : sans-serif;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.parallax {
+  [class*="bg__"] {
+    position : relative;
 
-}
-.bgimg-1 {
-  background-image: url("http://www.unicornspawellness.com/images/road2.jpg");
-  min-height: 100%;
-}
+    height : 50vh;
 
-.bgimg-2 {
-  background-image: url("http://unicornspawellness.com/logo.png");
-  min-height: 400px;
-}
+    text-indent : -9999px;
 
-.bgimg-3 {
-  background-image: url("http://www.unicornspawellness.com/images/logos.jpg");
-  min-height: 400px;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
+    background-attachment : fixed;
+    background-position   : top center;
+    background-size       : cover;
+    
+    &:nth-child( 2n ) {
+      box-shadow : inset 0 0 1em #111; 
     }
+  }
+  
+  .bg__foo, .bg__bazz {
+    height : 100vh;
+  }
+  
+  .bg__foo {
+    background-image : url(
+      https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg
+    );
+  }
+
+  .bg__bar {
+    background-image : url(
+      https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax2.jpg
+    );
+  }
+
+  .bg__baz {
+    background-image : url(
+      https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax3.jpg
+    ); 
+  }
+
+  .bg__bazz {
+    background-image : url(
+      https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg
+    ); 
+  }
+  
+  .bg__break {
+    box-shadow : inset 0 0 1em #111; 
+    
+    background-image : url(
+      https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg
+    ); 
+  }
+  
+  .capture {
+    float : right;
+    
+    width : 200px;
+    
+    padding : 1em;
+    margin  : -1.5em 1em 0 0;
+    
+    text-indent : 0;
+    
+    background : rgba( #f3f3f3, 0.75 );
+    
+    box-shadow : 0 1px 0.125em #333;
+  }
 }
+
+article {
+  .container {
+    width : 600px;
+    
+    margin : 0 auto;
+  }
+  header {
+    position : relative;
+    
+    margin : -5em 0 0 0;
+    padding : 1em;
+    
+    text-align : left;
+    font-size : 2em;
+    
+    color : #333;
+    background-color : rgba( #fff, 0.75 );
+  }
+  
+  h1, h2 {
+    margin : 0 0 0.333em;
+  }
+  
+  section {
+    padding : 3em;
+    
+    &.parallax {
+      margin  : 0;
+      padding : 0;
+    }
+  }
+}
+
+a {
+  &, &:visited, &:active {
+    color : #f66;
+  }
+}
+
 </style>
 </head>
 <body>
 
-<div class="bgimg-1">
-  <div class="caption">
-    <span class="border">SCROLL DOWN</span>
+<article>
+  <div class="parallax">
+    <div class="bg__foo">foo</div>
+    <div class="bg__bar">bar</div>
+    <div class="bg__baz">baz</div>
+    <div class="bg__bazz">bazz</div>
   </div>
-</div>
-
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;">Parallax Demo</h3>
-  <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
-</div>
-
-<div class="bgimg-2">
-  <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
-  </div>
-</div>
-
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-  </div>
-</div>
-
-<div class="bgimg-3">
-  <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
-  </div>
-</div>
-
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-  </div>
-</div>
-
-<div class="bgimg-1">
-  <div class="caption">
-    <span class="border">COOL!</span>
-  </div>
-</div>
+  <header>
+    <h1>Example for 'background-attachment : fixed'</h1>
+    <h2><a href="https://twitter.com/stefanjudis">@stefanjudis</a></h2>
+    <p>Image by <a href="http://matty4z.deviantart.com/art/mlp-lil-stream-351612016">Matty4z</a></p>
+  </header>
+  <section>
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </section>
+  <section class="parallax">
+    <div class="bg__break">
+      <div class="capture">Caption for this beautiful break image, Caption for this beautiful break image, Caption for this beautiful break image, Caption for this beautiful break image.</div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </section>
+</article>
 
 </body>
 </html>
