@@ -27,6 +27,11 @@
 <script type="text/javascript">
 var ote1				= new Array("masaj 1", "masaj 2");
 var ote2				= new Array("masaj 2-1", "masaj 2-2");
+var ote3				= new Array("masaj 3-1", "masaj 3-2");
+var ote4				= new Array("masaj 4-1", "masaj 4-2");
+var ote5				= new Array("masaj 5-1", "masaj 5-2");
+var ote6				= new Array("masaj 6-1", "masaj 6-2");
+var ote7				= new Array("masaj 7-1", "masaj 7-2");
 
 function set_player() {
   var select_otel = document.arama.otel;
@@ -41,6 +46,31 @@ function set_player() {
   if (selected_otel == "otel 2"){
     for(var i=0; i<ote2.length; i++)
     select_masaj.options[select_masaj.options.length] = new Option(ote2[i]);
+  }
+	 select_masaj.options.length=0;
+  if (selected_otel == "otel 3"){
+    for(var i=0; i<ote3.length; i++)
+    select_masaj.options[select_masaj.options.length] = new Option(ote3[i]);
+  }
+	 select_masaj.options.length=0;
+  if (selected_otel == "otel 4"){
+    for(var i=0; i<ote4.length; i++)
+    select_masaj.options[select_masaj.options.length] = new Option(ote4[i]);
+  }
+	 select_masaj.options.length=0;
+  if (selected_otel == "otel 5"){
+    for(var i=0; i<ote5.length; i++)
+    select_masaj.options[select_masaj.options.length] = new Option(ote5[i]);
+  }
+	 select_masaj.options.length=0;
+  if (selected_otel == "otel 6"){
+    for(var i=0; i<ote6.length; i++)
+    select_masaj.options[select_masaj.options.length] = new Option(ote6[i]);
+  }
+	 select_masaj.options.length=0;
+  if (selected_otel == "otel 7"){
+    for(var i=0; i<ote7.length; i++)
+    select_masaj.options[select_masaj.options.length] = new Option(ote7[i]);
   }
 }
 </script>
@@ -66,9 +96,14 @@ function set_player() {
     <tr><td><label style="float: left;" for="Question/Comment">Question/Comment:</label><input style="float: right;" type="Mesajınız" name="Mesajınız" placeholder=""></td></tr>
  
     <td style="float: left;">Otel:<select type="text" name="otel" onchange="set_player()" style="float: right;width: 400px;">
-    <option style="float: right;" selected="selected" style="background-color:#FFCC00;">Please Chose</option>
-    <option type="text" value="otel 1">Otel 1</option>
-    <option type="text" value="otel 2">Otel 2</option>
+	<option style="float: right;" selected="selected" style="background-color:#FFCC00;">Please Chose</option>
+	<option type="text" value="otel 1"> Letoonia Resort</option>
+	<option type="text" value="otel 2">Liberty Hotels Lykia</option>
+	<option type="text" value="otel 3">Lykia Botanika Beach &amp; Fun Club </option>
+	<option type="text" value="otel 4">Alize Otel</option>
+	<option type="text" value="otel 5">Sahra Su Otel</option>
+	<option type="text" value="otel 6">Green Forest Otel</option>
+	<option type="text" value="otel 7">Nicholas Otel</option>
     </select>
     </td>
     <tr><td style="float: left;">Massage:<select style="float: right;width: 400px;" type="text" name="masaj">
@@ -114,7 +149,8 @@ if (!Modernizr.input.placeholder){
 	<p>Opening hours of all our spa centers: 09:00</p>
 	<p>Closing hours of all our spa centers: 20:00</p>
 	<p>Unicorn Spa Wellness is the foundation of a <a href='http://unicorncompany.com.tr' target="_blank">Unicorn Company</a></p>
-	    </div>
+	    </div> 
 	    </center>
+version: 0001	   
 </body>
 </html>
