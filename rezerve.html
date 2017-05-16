@@ -39,7 +39,7 @@ function set_player() {
   var selected_otel = select_otel.options[select_otel.selectedIndex].value;
 
   select_masaj.options.length=0;
-  if (selected_otel == "otel 1"){
+  if (selected_otel == "Letoonia"){
     for(var i=0; i<ote1.length; i++)
     select_masaj.options[select_masaj.options.length] = new Option(ote1[i]);
   }
@@ -97,7 +97,7 @@ function set_player() {
  
     <td style="float: left;">Otel:<select type="text" name="otel" onchange="set_player()" style="float: right;width: 400px;">
 	<option style="float: right;" selected="selected" style="background-color:#FFCC00;">Please Chose</option>
-	<option type="text" value="otel 1"> Letoonia Resort</option>
+	<option type="text" value="Letoonia"> Letoonia Resort</option>
 	<option type="text" value="otel 2">Liberty Hotels Lykia</option>
 	<option type="text" value="otel 3">Lykia Botanika Beach &amp; Fun Club </option>
 	<option type="text" value="otel 4">Alize Otel</option>
@@ -151,6 +151,6 @@ if (!Modernizr.input.placeholder){
 	<p>Unicorn Spa Wellness is the foundation of a <a href='http://unicorncompany.com.tr' target="_blank">Unicorn Company</a></p>
 	    </div> 
 	    </center>
-version: 0003 Otel 1   
+version: 0003 Letoonia   
 </body>
 </html>
