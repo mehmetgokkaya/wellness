@@ -1,145 +1,71 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-<head>
-<title>Unicorn Spa & Wellness</title>
-<style type='text/css'>
-#status-msg-wrap {
-background-color: aliceblue;
-margin-top: 10%;
-text-align: center;
-}
-</style>
-<script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Unicorn Spa Wellness</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="10; URL='http://unicornspawellness.com'" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
-//Document title scroller- By Graeme Robinson (me@graemerobinson.co.uk)
-//Exlusive permission granted to Dynamic Drive to include this script in their DHTML archive.
-//For full source code, terms of use visit http://www.dynamicdrive.com
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-var repeat=0 //enter 0 to not repeat scrolling after 1 run, othersise, enter 1
-var title=document.title
-var leng=title.length
-var start=1
-function titlemove() {
-  titl=title.substring(start, leng) + title.substring(0, start)
-  document.title=titl
-  start++
-  if (start==leng+1) {
-    start=0
-    if (repeat==0)
-    return
-  }
-  setTimeout("titlemove()",140)
-}
-if (document.title)
-titlemove()
-</script>
-</head>
-<body>
-<script>
+    <link rel="stylesheet" href="css/aos.css">
 
-/***********************************************
-* Refresh page Script- (c) Dynamic Drive (http://www.dynamicdrive.com)
-* Please keep this notice intact
-* Visit http://www.dynamicdrive.com/ for this script and 100s more.
-***********************************************/
+    <link rel="stylesheet" href="css/ionicons.min.css">
 
-function refreshpage(interval, countdownel, totalel){
-	var countdownel = document.getElementById(countdownel)
-	var totalel = document.getElementById(totalel)
-	var timeleft = interval+1
-	var countdowntimer
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-	function countdown(){
-		timeleft--
-		countdownel.innerHTML = timeleft
-		if (timeleft == -5){
-			clearTimeout(countdowntimer)
-			window.location.reload()
-		}
-		countdowntimer = setTimeout(function(){
-			countdown()
-		}, 1000)
-	}
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body id="top">
+    
+    <div class="hero-wrap js-fullheight" style="  background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(149, 89, 96, 0.7) ),    url(images/back1.jpg);" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+          	<div class="icon">
+          		<a href="index.html" class="logo">
+				<img src="logo.png" style="height: 300px;">          			
+          		</a>
+          	</div>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><img src="images/logoalt.png" style="height: 100px;"></h1>
+            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="color:black; height: 80px;">Mesajınız Gönderildi...  Birazdan Anasayfaya Yönlendirileceksiniz</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	countdown()
-}
-
-window.onload = function(){
-	refreshpage(10, "countdown") // refreshpage(duration_in_seconds, id_of_element_to_show_result)
-}
-
-</script>
-<div class='crosscol no-items section' id='crosscol'></div>
-<div id='status-msg-wrap'>
-<h3>
-<script language='JavaScript1.2'>
-//<![CDATA[
-/*
-Neon Lights Text
-By JavaScript Kit (http://javascriptkit.com)
-For this script, TOS, and 100s more DHTML scripts,
-Visit http://www.dynamicdrive.com
-*/
-
-var message="Mesajınız Gönderildi!"
-var neonbasecolor="black"
-var neontextcolor="Red"
-var flashspeed=90  //in milliseconds
-
-///No need to edit below this line/////
-
-var n=0
-if (document.all||document.getElementById){
-document.write('<font color="'+neonbasecolor+'">')
-for (m=0;m<message.length;m++)
-document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
-document.write('</font>')
-}
-else
-document.write(message)
-
-function crossref(number){
-var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
-return crossobj
-}
-
-function neon(){
-
-//Change all letters to base color
-if (n==0){
-for (m=0;m<message.length;m++)
-//eval("document.all.neonlight"+m).style.color=neonbasecolor
-crossref(m).style.color=neonbasecolor
-}
-
-//cycle through and change individual letters to neon color
-crossref(n).style.color=neontextcolor
-
-if (n<message.length-1)
-n++
-else{
-n=0
-clearInterval(flashing)
-setTimeout("beginneon()",1500)
-return
-}
-}
-
-function beginneon(){
-if (document.all||document.getElementById)
-flashing=setInterval("neon()",flashspeed)
-}
-beginneon()
-//]]>
-</script>
-</h3>
-<p style='font-size:21px;'><b id='countdown' style='color: #532828; font-size:22px;'></b> Saniye Sonra Otomatik Olarak Anasayfaya Yönlendirileceksiniz</p>
-<ul>
-<li><a href='http://www.unicornspawellness.com'>Beklemek İstemiyorsanız Buraya Tıklayabilirsiniz</a></li>
-</ul>
-</div>
-<meta content='10;URL=http://www.unicornspawellness.com' http-equiv='refresh'/>
-
-
-</body>
+    
+    <!-- END nav -->
+	
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
 </html>
